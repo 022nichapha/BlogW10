@@ -1,0 +1,268 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "Bricolage Grotesque", "mali", "Segoe UI", sans-serif;
+  /* background-color: salmon; */
+  color: #000000;
+}
+
+.wrapper {
+  width: 1000px;
+  max-width: 100%;
+  margin: auto;
+
+  /* background-color: salmon; */
+}
+a {
+  color: rgb(0, 31, 131);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+/* header */
+
+.sit-header {
+  background-color: aliceblue;
+  padding: 20px 0;
+  border-bottom: 2px solid rgb(0, 0, 0);
+}
+
+.box-header-inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-title {
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 4px;
+}
+
+.header-subtitle {
+  font-weight: 400;
+  font-size: 0.8rem;
+  color: rgb(179, 179, 179);
+}
+.social-icon a {
+  font-weight: 600;
+  font-size: 1rem;
+  color: rgb(0, 0, 0);
+
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+
+  transition: all 0.3s ease;
+}
+.social-icon a:hover {
+  border-color: rgb(0, 0, 0);
+  background-color: rgb(103, 164, 255);
+  color: blue;
+
+  transform: translateY(-5px);
+}
+
+/* } l                           navbar                            l */
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  /* gap: 15px; */
+  flex-wrap: wrap;
+}
+
+.main-nav {
+  background-color: rgb(0, 126, 184);
+}
+
+.nav-menu li a {
+  color: rgb(255, 255, 255);
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: block;
+  padding: 10px 0;
+  text-decoration: none;
+  margin-left: 50px;
+}
+
+.nav-menu li a:hover,
+.nav-menu li a.active {
+  /* เรียก classใช้ . */
+  background-color: rgb(172, 216, 255);
+  color: #000000;
+}
+
+/* hero section */
+
+.hero-content {
+  background-color: rgb(224, 243, 255);
+  padding: 40px 0;
+  box-shadow: 0 4px 15px rgb(226, 226, 226);
+  margin-bottom: 30px;
+}
+
+.hero-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px 4px#000000;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 20px;
+
+  /* grid-template-columns: 1fr 1fr;
+grid-template-columns: repeat(2, 1fr);
+grid-template-columns: repeat(2, minmax(250px, 1fr));
+grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); */
+}
+
+.hero-item {
+  background-color: aliceblue;
+  padding: 25px;
+  border-radius: 8px;
+  transition: all 0.5s ease;
+}
+
+.hero-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  background: white;
+}
+
+.hero-item h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  line-height: 1.3;
+  margin-bottom: 10px;
+}
+
+.hero-item p {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.hero-item .read-more {
+  font-size: 0.9rem;
+  color: #1e8bc3;
+
+  display: inline-block;
+}
+
+.hero-item .read-more:hover {
+  color: #764ba2;
+  text-decoration: none;
+}
+
+.hero-item .read-more::after {
+  content: "→";
+  margin-left: 5px;
+
+  transition: margin-left 0.3s ease;
+}
+
+.hero-item .read-more:hover::after {
+  margin-left: 10px;
+}
+
+.content-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+.card {
+  background-color: white;
+  border-radius: 4px;
+  padding: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.post-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.date-circle {
+  width: 50px;
+  height: 50px;
+  background-color: rgb(0, 126, 184);
+  border-radius: 50%;
+
+  font-size: 0.65rem;
+  color: antiquewhite;
+  font-weight: 600;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.date-day {
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 0.8;
+}
+
+.post-title {
+  font-size: 1.7rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #777;
+}
+
+.post-image {
+  height: 300px;
+  overflow: hidden;
+
+  margin: 15px 0;
+}
+
+.post-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.post-dateil {
+  color: #555;
+  font-size: 0.8rem;
+  line-height: 1.6;
+}
+
+.post-footer {
+  color: #555;
+  font-size: 0.65rem;
+
+  border-top: 1px solid #ddd;
+  padding-top: 8px;
+}
+
+.card + .card {
+  margin-top: 15px;
+}
